@@ -1,0 +1,74 @@
+$ol-index-width: 0;
+
+li {
+  margin-bottom: 8px;
+}
+
+// Lists
+ul:not([class]),
+ol:not([class]) {
+  counter-reset: num;
+  margin: 0 0 16px 10px;
+  color: $light-gray;
+
+  li {
+    position: relative;
+    padding: 0 0 0 25px;
+  }
+
+  ul,
+  ol {
+    margin: 8px 0 0 4px;
+  }
+
+  i,
+  em {
+    color: $lighter-gray;
+  }
+
+  a + i,
+  a + em {
+    display: inline-block;
+    margin-left: 16px;
+  }
+}
+
+ul:not([class]) > li {
+  &::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: 36px;
+
+    display: block;
+
+    width: 1rem;
+
+    content: "\00B7";
+    text-align: left;
+    line-height: 20px;
+
+    @include mq(xl) {
+      line-height: 24px;
+    }
+  }
+}
+
+ol:not([class]) > li {
+  margin-left: $ol-index-width;
+
+  list-style: none;
+
+  &:before {
+    position: absolute;
+    left: -$ol-index-width;
+
+    display: block;
+
+    width: $ol-index-width;
+
+    content: counter(num) ".";
+    counter-increment: num;
+    text-align-last: left;
+  }
+}

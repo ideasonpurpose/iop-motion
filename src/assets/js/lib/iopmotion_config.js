@@ -11,8 +11,8 @@ const userTargets = require('../animations.js');
 const defaults = {
   effectPrefix: 'move:',
   activeClass: 'inview',
-  effect: 'fade-up',
 
+  effect: 'fade-up',
   distance: 40, // px
   duration: 1000, // ms
   delay: 0, // ms
@@ -25,7 +25,7 @@ const defaults = {
  * Set Default Selectors
  * 
  * Usage
- * <div class=".move:${effect}" />
+ * <div data-motion-effect="${effect}" />
  * 
  * Effects:
  * fade-up, fade-down, fade-left, fade-right
@@ -34,7 +34,7 @@ const defaults = {
 
 const builtInTargets = [
   {
-    sel: '[data-motion-effect]'
+    sel: '[data-motion]'
   }
 ]
 

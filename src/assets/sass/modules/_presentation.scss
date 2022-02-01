@@ -1,0 +1,47 @@
+a,
+button {
+  transition: border 250ms, opacity 250ms, color 250ms, transform 250ms;
+
+  &:not([class]) {
+    border-bottom: 1px solid;
+
+    &:hover {
+      border-color: $mint;
+    }
+  }
+}
+strong,
+b {
+  color: $charcoal;
+  font-weight: 500;
+}
+
+p {
+  margin-bottom: 16px;
+}
+
+svg {
+  fill: currentColor;
+}
+
+code {
+  font-family: "Roboto Mono", monospace, sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  color: $orange;
+  padding: 4px 8px;
+  background: $background;
+}
+
+pre {
+  font-family: "Roboto Mono", monospace, sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  color: $orange;
+  background: $background;
+
+
+  margin: 24px 0;
+  padding: 1em 1.5em 0;
+  border-radius: 3px;
+}

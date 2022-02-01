@@ -17,9 +17,16 @@
 
 const moveTargets = [
   {
+    sel: '.exampleSequence > div',
+    sequence: 'exampleSequence',
+    sequenceDelay: 500
+  },
+
+
+  {
     sel: '.header li',
     effect: 'slide-left',
-    sequence: 'header lists'
+    sequence: 'header-lists'
   },
 
   {

@@ -69,9 +69,7 @@ let observer = new IntersectionObserver(observerCallback, {});
  * and send them to @observer
  */
 
-let groupedSelectors = {
-  'nosequence': []
-};
+let groupedSelectors = {};
 
 targets.forEach(t => {
   let sel = t.sel;
@@ -104,7 +102,10 @@ targets.forEach(t => {
     if (groupedSelectors[tSequence]) groupedSelectors[tSequence].push(sel);
     else groupedSelectors[tSequence] = [sel];
   }
-  else groupedSelectors['nosequence'].push(sel);
+  else {
+    if (groupedSelectors['nosequence']) groupedSelectors['nosequence'].push(sel);
+    else groupedSelectors['nosequence'] = [sel];
+  }
 });
 
 
@@ -117,6 +118,7 @@ targets.forEach(t => {
  * 
  * E.g. sequence: 'footerAnimations'
  */
+
 
 for (var i in groupedSelectors) {
   let selector = groupedSelectors[i].join(',');
