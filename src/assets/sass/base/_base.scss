@@ -1,0 +1,16 @@
+/**
+ * Base
+ */
+
+body, html {
+  // this makes the sticky footer work
+  height: 100%;
+}
+
+body {
+  @extend .sans;
+
+  // Prevent horizontal scrolling
+  width: 100%;
+  overflow-x: hidden;
+}
