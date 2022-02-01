@@ -18,7 +18,7 @@ module.exports = {
   // pass: 'EXTRANET_PASSWORD', 
 
   // Internal Stage Settings
-  BASEURL: isProduction ? "/iop-motion" : "",
+  BASEURL: isProduction ? "/iop-motion/dist" : "",
   PRODURL: isProduction ? "https://ideasonpurpose.github.io" : "",
 
   // Client Review Settings
