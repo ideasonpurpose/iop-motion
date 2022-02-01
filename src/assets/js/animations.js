@@ -22,38 +22,25 @@ const moveTargets = [
     sequenceDelay: 500
   },
 
-
   {
-    sel: '.header li',
-    effect: 'slide-left',
-    sequence: 'header-lists'
+    sel: 'h1, pre',
+    effect: 'fade-in',
+    sequence: 'content',
+    delay: 500
   },
 
   {
-    sel: 'img',
-    sequence: '1',
-    delay: 250
-  },
-
-  {
-    sequence: '2',
-    sel: '.sequence p',
-    effect: 'fade-up',
-    delay: 100
-  },
-  {
-    sequence: '2',
-    sel: 'li',
+    sel: 'h2, h3, li',
     effect: 'fade-right',
-    delay: 100
+    sequence: 'content',
+    sequenceDelay: 1000
   },
+
   {
-    sequence: '2',
-    sel: '.nosequence p, .nosequence div',
-    duration: 1000,
-    distance: 20,
-    effect: 'fade-down',
-  }
+    sel: '.wrapper > p',
+    effect: 'fade-up',
+    sequence: 'content'
+  },
 ];
 
 module.exports = moveTargets;

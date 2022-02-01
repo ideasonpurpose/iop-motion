@@ -10,11 +10,11 @@ layout: base.njk
   <p>The unique <i>animation sequence</i> feature enables smart one-at-a-time animations that work on any device at any breakpoint.</p>
 
   <h2>Technical Overview</h2>
-  <p>
-    <code>IntersectionObserver</code> sits at the heart of the implementation.</p>
+  <p><code>IntersectionObserver</code> sits at the heart of the implementation.</p>
   <p>Various selectors can be grouped into animation sequences, so as to enable smooth animations regardless of the given DOM context.</p>
   <p>Detaching animations from the DOM is made possible by utilizing a JS-based configuration object, instead of relying on html classes.</p>
   <p>However, for ease of use, classes and attributes can still be used to quickly tweak animations settings, as presented below.</p>
+  <p>In scenarios where the user lands on a scrolled down page (such as visiting an achor link), all animations above the visible area will be disabled.</p>
 
   <h2>Installlation</h2>
   <ol>

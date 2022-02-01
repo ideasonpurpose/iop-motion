@@ -1,6 +1,7 @@
 # IOP Motion
 
 Common animation library used at [Ideas On Purpose](https://www.ideasonpurpose.com/).
+Read the [IOP Motion animation library guide](https://ideasonpurpose.github.io/iop-motion/dist/) for installation and examples.
 
 
 ## Getting Started
@@ -11,4 +12,4 @@ Common animation library used at [Ideas On Purpose](https://www.ideasonpurpose.c
 
 Edit the `src` directory.
 
-After `npm run build`, the `dist` directory is ready to be published.
+Once finished, run `npm run build` and push changes.
