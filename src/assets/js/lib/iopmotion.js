@@ -1,6 +1,7 @@
 const config = require('./iopmotion_config.js');
 const defaults = config.defaults;
 const targets = config.targets;
+const prefersRM = window.matchMedia("(prefers-reduced-motion: reduce)");
 
 /**
  * Set up Observers
@@ -72,6 +73,9 @@ let observer = new IntersectionObserver(observerCallback, {});
 let groupedSelectors = {};
 
 targets.forEach(t => {
+  // Skip animations if user prefers-reduced-motion
+  if (!prefersRM || prefersRM.matches) return false;
+
   let sel = t.sel;
   let els = document.querySelectorAll(sel);
 
