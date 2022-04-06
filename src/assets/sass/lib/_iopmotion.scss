@@ -65,13 +65,14 @@
     transform-origin: right;
     transform: translateX(-101%);
     transition: transform 1s ease-in-out;
+    transition-delay: calc(var(--delay) * 1ms);
   }
 
   img,
   .move\:wipe-img {
     opacity: 0;
-    transition-property: opacity;
-    transition-delay: 0.5s;
+    transition: opacity 0s;
+    transition-delay: calc(var(--delay) * 1ms + 0.5s);
   }
 
   &.move\:inview {
@@ -82,17 +83,6 @@
     img,
     .move\:wipe-img {
       opacity: 1;
-    }
-  }
-
-  &[data-move\:wipe-delay="1"] {
-    &::before {
-      transition: transform 1s ease-in-out 0.5s;
-    }
-
-    img,
-    .move\:wipe-img {
-      transition-delay: 1s;
     }
   }
 }
