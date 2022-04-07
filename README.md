@@ -13,3 +13,6 @@ Read the [IOP Motion animation library guide](https://ideasonpurpose.github.io/i
 Edit the `src` directory.
 
 Once finished, run `npm run build` and push changes.
+
+## Quirks
+If animations don't happen on page load properly (e.g. items are visible when they should be faded out), it's most likely a CSS `transition` is overriding the library transitions. Fix it by wrapping the element in a new container and apply the motion effects on it instead.
