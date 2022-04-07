@@ -132,3 +132,5 @@ for (var i in groupedSelectors) {
     observer.observe(elm);
   });
 }
+
+document.documentElement.classList.remove('loading');
