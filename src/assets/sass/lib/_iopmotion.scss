@@ -19,9 +19,12 @@
 
   &.move\:inview {
     opacity: 1;
-    transform: translate(0);
     transition-duration: calc(var(--duration) * 1ms);
     transition-delay: calc(var(--delay) * 1ms);
+
+    &:not(.move\:fade-in) {
+      transform: translate(0);
+    }
   }
 
   @at-root #{selector-unify(&, span)},
